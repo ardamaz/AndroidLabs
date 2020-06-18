@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -11,16 +10,60 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_message"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/theTextView"
+        android:text="@string/theTextView"
+        android:textSize="30dp" />
 
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ButtonText" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/theButton"
+            android:layout_weight="1"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/theButton" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="fill"
+            android:id="@+id/theCheckBox"
+            android:text="@string/theCheckBox" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/theImageButton"
+            android:layout_weight="1"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/flag" />
+
+        <Switch
+            android:layout_weight="1"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/theSwitch"
+            android:text="@string/theSwitchButton"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/theEditText"
+        android:hint="@string/theEditText"
+        android:inputType="textPersonName|textCapWords"/>
 
 </LinearLayout>
